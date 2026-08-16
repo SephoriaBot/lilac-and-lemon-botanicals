@@ -7,7 +7,7 @@ export default function App() {
     <>
       <nav>
         <div className="wrap">
-          <span className="wordmark">Lilac + Lemon Botanicals</span>
+          <span className="wordmark">Rue Botanicals</span>
           <span className="status-pill">In the making</span>
         </div>
       </nav>
@@ -19,10 +19,8 @@ export default function App() {
           <p className="tagline">
             Formulas built on years behind the treatment table — steeped, tested, and (soon) bottled by hand.
           </p>
-          <div className="art-frame hero-art">
-            {/* Replace this block with your own artwork:
-                <img src="/hero-art.png" alt="" /> */}
-            <span className="art-frame-label">your art here<br />4:5 · e.g. hero-art.png</span>
+          <div className="art-frame filled hero-art">
+            <img src="/illustrations/07_spa_tray.png" alt="Illustrated spa tray with botanicals" />
           </div>
         </div>
       </header>
@@ -37,10 +35,8 @@ export default function App() {
             <p>Add a paragraph here in your own voice — how long you've been doing skin, what made you want to formulate instead of just treat, what a client would notice in your hands that they won't find on a shelf.</p>
             <p>This is the part people read to decide if they trust you. It doesn't need to be polished — it needs to sound <span className="story-mark">like you</span>.</p>
           </div>
-          <div className="art-frame story-art">
-            {/* Replace this block with your own artwork:
-                <img src="/story-art.png" alt="" /> */}
-            <span className="art-frame-label">your art here<br />4:5 · e.g. story-art.png</span>
+          <div className="art-frame filled story-art">
+            <img src="/illustrations/06_flower_pitcher.png" alt="Illustrated flower pitcher" />
           </div>
         </div>
       </section>
@@ -50,7 +46,7 @@ export default function App() {
       <FollowForm />
 
       <footer>
-        <div className="wrap">© 2026 Lemon + Lilac Botanicals · built one step at a time</div>
+        <div className="wrap">© 2026 Rue Botanicals · built one step at a time</div>
       </footer>
     </>
   );
