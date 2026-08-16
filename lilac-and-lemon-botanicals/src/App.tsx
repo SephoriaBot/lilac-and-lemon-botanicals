@@ -20,7 +20,7 @@ export default function App() {
             Formulas built on years behind the treatment table — steeped, tested, and (soon) bottled by hand.
           </p>
           <div className="art-frame filled hero-art">
-            <img src="/illustrations/07_spa_tray.png" alt="Illustrated spa tray with botanicals" />
+            <img src="/illustrations/08_lemon_spa.png" alt="Illustrated spa tray with botanicals" />
           </div>
         </div>
       </header>
@@ -36,7 +36,7 @@ export default function App() {
             <p>This is the part people read to decide if they trust you. It doesn't need to be polished — it needs to sound <span className="story-mark">like you</span>.</p>
           </div>
           <div className="art-frame filled story-art">
-            <img src="/illustrations/06_flower_pitcher.png" alt="Illustrated flower pitcher" />
+            <img src="/illustrations/15_window.png" alt="Illustrated flower pitcher" />
           </div>
         </div>
       </section>
