@@ -7,7 +7,7 @@ export default function App() {
     <>
       <nav>
         <div className="wrap">
-          <span className="wordmark">Lemon + Lilac Botanicals</span>
+          <span className="wordmark">Lilac + Lemon Botanicals</span>
           <span className="status-pill">In the making</span>
         </div>
       </nav>
