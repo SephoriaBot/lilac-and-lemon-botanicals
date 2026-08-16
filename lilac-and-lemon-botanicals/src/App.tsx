@@ -1,6 +1,6 @@
-import ProgressRitual from './components/ProgressRitual';
-import ProductGrid from './components/ProductGrid';
-import FollowForm from './components/FollowForm';
+import ProgressRitual from './ProgressRitual';
+import ProductGrid from './ProductGrid';
+import FollowForm from './FollowForm';
 
 export default function App() {
   return (
