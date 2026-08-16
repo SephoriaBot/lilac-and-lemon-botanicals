@@ -67,7 +67,7 @@ h1, h2, h3 {
   letter-spacing: 0.04em;
   line-height: 1.7;
 }
-.art-frame img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); }
+.art-frame img { width: 100%; height: auto; display: block; border-radius: var(--radius); }
 
 .art-frame.filled { border: none; background: none; padding: 0; }
 
@@ -115,7 +115,8 @@ header.hero h1 {
 }
 header.hero h1 .accent { font-style: italic; font-weight: 400; color: var(--butter-deep); }
 .tagline { max-width: 460px; margin: 22px auto 0; font-size: 1.05rem; color: var(--plum-soft); }
-.hero-art { max-width: 320px; aspect-ratio: 4/5; margin: 44px auto 0; }
+.hero-art { max-width: 320px; margin: 44px auto 0; }
+.story-art { }
 
 .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--lavender), transparent); }
 
@@ -125,7 +126,6 @@ section.story h2 { font-size: 2rem; margin: 16px 0 18px; line-height: 1.2; }
 section.story p { color: var(--plum-soft); max-width: 46ch; }
 section.story p + p { margin-top: 14px; }
 .story-mark { font-style: italic; font-family: 'Fraunces', serif; color: var(--butter-deep); }
-.story-art { aspect-ratio: 4/5; }
 
 /* ---------- routine ---------- */
 section.routine { padding: 80px 0 92px; background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
