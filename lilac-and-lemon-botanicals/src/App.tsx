@@ -1,4 +1,3 @@
-import ProgressRitual from './ProgressRitual';
 import ProductGrid from './ProductGrid';
 import FollowForm from './FollowForm';
 
@@ -11,21 +10,6 @@ export default function App() {
           <span className="status-pill">In the making</span>
         </div>
       </nav>
-
-      <header className="hero">
-        <div className="wrap">
-          <span className="eyebrow">Small-batch skincare · founded by an esthetician</span>
-          <h1>Grown before<br />it's <span className="accent">made</span>.</h1>
-          <p className="tagline">
-            Formulas built on years behind the treatment table — steeped, tested, and (soon) bottled by hand.
-          </p>
-          <div className="art-frame filled hero-art">
-            <img src="/illustrations/08_lemon_spa.png" alt="Illustrated spa tray with botanicals" />
-          </div>
-        </div>
-      </header>
-
-      <div className="divider" />
 
       <section className="story">
         <div className="wrap" style={{ display: 'contents' }}>
@@ -41,7 +25,6 @@ export default function App() {
         </div>
       </section>
 
-      <ProgressRitual />
       <ProductGrid />
       <FollowForm />
 
