@@ -4,10 +4,10 @@ export default function Home() {
   return (
     <header className="hero">
       <div className="wrap">
-        <span className="eyebrow">Small-batch skincare · founded by an esthetician</span>
+        <span className="eyebrow">Small-batch skincare · founded by a master esthetician</span>
         <h1>Rue <span className="accent">Botanicals</span></h1>
         <p className="tagline">
-          Formulas built on years behind the treatment table — steeped, tested, and (soon) bottled by hand.
+       Formulas built on your needs and nothing else. Tested only on those that can consent (animals are safe here). Crafted in our home studio, bottled, and shipped straight to your door.
         </p>
         <div className="hero-links">
           <Link to="/about" className="hero-link">Read the story</Link>
