@@ -82,8 +82,23 @@ nav {
   border-bottom: 1px solid var(--line);
 }
 nav .wrap { display: flex; align-items: center; justify-content: space-between; padding: 16px 32px; }
-.wordmark { font-size: 1.15rem; letter-spacing: 0.02em; }
+.nav-inner { gap: 24px; }
+.wordmark { font-size: 1.15rem; letter-spacing: 0.02em; white-space: nowrap; }
 .wordmark em { font-style: italic; color: var(--butter-deep); }
+.nav-links { display: flex; align-items: center; gap: 28px; flex: 1; justify-content: center; }
+.nav-link {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--plum-soft);
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.nav-link:hover { color: var(--lavender-deep); }
+.nav-link.active { color: var(--lavender-deep); border-bottom-color: var(--lavender-deep); }
 .status-pill {
   font-family: 'Space Mono', monospace;
   font-size: 0.66rem;
@@ -115,6 +130,20 @@ header.hero h1 {
 }
 header.hero h1 .accent { font-style: italic; font-weight: 400; color: var(--butter-deep); }
 .tagline { max-width: 460px; margin: 24px auto 0; font-size: 1.05rem; color: var(--plum-soft); }
+.hero-links { display: flex; gap: 16px; justify-content: center; margin-top: 40px; flex-wrap: wrap; }
+.hero-link {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--plum);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 12px 24px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.hero-link:hover { border-color: var(--lavender-deep); background: rgba(220, 207, 242, 0.16); }
 .hero-art { max-width: 320px; margin: 48px auto 0; }
 .story-art { }
 
@@ -221,4 +250,6 @@ footer { padding: 32px 0; text-align: center; font-family: 'Space Mono', monospa
   header.hero { padding: 64px 0 48px; }
   section.story, section.routine, section.products, section.follow { padding: 64px 0; }
   .follow-form { flex-direction: column; border-radius: 18px; }
+  .nav-inner { flex-wrap: wrap; gap: 12px; }
+  .nav-links { order: 3; width: 100%; gap: 18px; }
 }
