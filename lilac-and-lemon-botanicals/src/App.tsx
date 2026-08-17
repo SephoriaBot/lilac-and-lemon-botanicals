@@ -12,7 +12,7 @@ export default function App() {
       </nav>
 
       <section className="story">
-        <div className="wrap" style={{ display: 'contents' }}>
+        <div className="wrap">
           <div>
             <span className="label">The Idea</span>
             <h2>An esthetician's cabinet, bottled.</h2>
