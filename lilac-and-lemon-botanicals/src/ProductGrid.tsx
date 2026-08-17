@@ -24,10 +24,10 @@ export default function ProductGrid() {
     <section className="products">
       <div className="wrap">
         <div className="products-head">
-          <span className="label">Coming Soon</span>
-          <h2>What's in the works.</h2>
-          <p>Pulled straight from your database — edit rows in Turso and this list updates without touching code.</p>
-        </div>
+                   <span className="label">Coming Soon</span>
+          <h2>Three gardens, one cabinet.</h2>
+          <p>Every formula grows out of one of three botanical pairings — rose and lemon balm for gentle days, calendula and oat for tired barriers, green tea and lemon balm for balance. Nothing borrowed, nothing filler.</p>
+       </div>
         <div className="product-grid">
           {products.map((p) => (
             <div className="product-card" key={p.id}>
