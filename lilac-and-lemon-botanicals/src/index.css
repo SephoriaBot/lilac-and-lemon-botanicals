@@ -121,7 +121,8 @@ header.hero h1 .accent { font-style: italic; font-weight: 400; color: var(--butt
 .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--lavender), transparent); }
 
 /* ---------- story ---------- */
-section.story { padding: 96px 0; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
+section.story { padding: 96px 0; }
+section.story .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
 section.story h2 { font-size: 2rem; margin: 16px 0 24px; line-height: 1.2; }
 section.story p { color: var(--plum-soft); max-width: 46ch; }
 section.story p + p { margin-top: 16px; }
@@ -210,7 +211,7 @@ footer { padding: 32px 0; text-align: center; font-family: 'Space Mono', monospa
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 
 @media (max-width: 860px) {
-  section.story { grid-template-columns: 1fr; gap: 48px; }
+  section.story .wrap { grid-template-columns: 1fr; gap: 48px; }
   .story-art { max-width: 280px; margin: 0 auto; order: -1; }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .product-grid { grid-template-columns: 1fr; }
