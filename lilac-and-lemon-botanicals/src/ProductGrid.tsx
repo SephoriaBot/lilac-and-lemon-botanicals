@@ -26,6 +26,11 @@ export default function ProductGrid() {
         <div className="products-head">
                    <span className="label">Coming Soon</span>
           <h2>Inspired by our personal garden.</h2>
+
+    <div className="art-frame filled story-art">
+          <img src="/illustrations/05_towels.png" alt="Illustrated clean stack of towels" />
+        </div>
+
           <p>Every formula grows out of one of three botanical pairings — rose and lemon balm for gentle days, calendula and oat for tired barriers, green tea and lemon balm for balance. Nothing borrowed, nothing filler.</p>
        </div>
         <div className="product-grid">
