@@ -212,6 +212,11 @@ section.products { padding: 96px 0; }
 .product-card h3 { font-style: italic; font-size: 1.25rem; margin-bottom: 8px; }
 .product-card .ingredient { font-family: 'Jost', sans-serif; font-size: 0.64rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--butter-deep); margin-bottom: 10px; display: block; }
 .product-card p { font-size: 0.86rem; color: var(--plum-soft); }
+.product-meta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
 
 /* ---------- follow ---------- */
 section.follow { background: var(--lavender-deep); color: var(--cream); padding: 96px 0; text-align: center; }
