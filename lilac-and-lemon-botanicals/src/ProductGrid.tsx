@@ -25,7 +25,7 @@ export default function ProductGrid() {
       <div className="wrap">
         <div className="products-head">
                    <span className="label">Coming Soon</span>
-          <h2>Three gardens, one cabinet.</h2>
+          <h2>Inspired by our personal garden.</h2>
           <p>Every formula grows out of one of three botanical pairings — rose and lemon balm for gentle days, calendula and oat for tired barriers, green tea and lemon balm for balance. Nothing borrowed, nothing filler.</p>
        </div>
         <div className="product-grid">
