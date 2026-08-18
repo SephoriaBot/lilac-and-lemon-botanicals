@@ -8,6 +8,8 @@ type Product = {
   description: string;
   swatch_color: string;
   status: string;
+  size_oz: number;
+  price: number;
 };
 
 export default function ProductGrid() {
@@ -39,8 +41,12 @@ export default function ProductGrid() {
               {p.status === 'soon' && <span className="ribbon">soon</span>}
               <div className="product-swatch" style={{ background: p.swatch_color }} />
               <span className="ingredient">{p.ingredient_label}</span>
-              <h3>{p.name}</h3>
-              <p>{p.description}</p>
+             <h3>{p.name}</h3>
+<div className="product-meta">
+  <span>{p.size_oz} oz</span>
+  <span>${p.price}</span>
+</div>
+<p>{p.description}</p>
             </div>
           ))}
         </div>
