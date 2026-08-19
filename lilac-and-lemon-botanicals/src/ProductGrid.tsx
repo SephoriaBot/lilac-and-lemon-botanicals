@@ -33,7 +33,7 @@ export default function ProductGrid() {
           <img src="/illustrations/05_towels.png" alt="Illustrated clean stack of towels" />
         </div>
 
-          <p>Every formula grows out of one of three botanical pairings — rose and lemon balm for gentle days, calendula and oat for tired barriers, green tea and lemon balm for balance. Nothing borrowed, nothing filler.</p>
+          <p>Every formula begins with botanicals chosen for a reason — rose and calendula for gentle days, green tea and yarrow for balance, and green tea and nasturtium for fresh, clear-feeling skin. Nothing extra, nothing borrowed — just thoughtful formulas rooted in the garden.</p>
        </div>
         <div className="product-grid">
           {products.map((p) => (
