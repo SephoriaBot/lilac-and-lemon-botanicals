@@ -20,8 +20,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       args: [email.trim().toLowerCase()],
     });
     return res.status(200).json({ ok: true });
-  } catch {
-    // likely a duplicate email (UNIQUE constraint) — treat as success either way
-    return res.status(200).json({ ok: true });
+  } catch (err: any) {
+  if (err?.message?.includes('UNIQUE constraint')) {
+    return res.status(200).json({ ok: true }); // already signed up
   }
+  console.error('Signup insert failed:', err);
+  return res.status(500).json({ error: 'Something went wrong' });
+}
 }
