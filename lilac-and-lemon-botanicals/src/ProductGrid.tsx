@@ -15,12 +15,12 @@ type Product = {
 export default function ProductGrid() {
   const [products, setProducts] = useState<Product[]>([]);
   const productImages: Record<number, string> = {
-  89: '/illustrations/1_lait_de_rose.png',
-  90: '/illustrations/2_eclat_serum.png',
-  91: '/illustrations/3_creme_douce.png',
-  92: '/illustrations/4_lessentiel_cleanser.png',
-  93: '/illustrations/5_equilibre_serum.png',
-  94: '/illustrations/6_voile_moisturizer.png',
+  95: '/illustrations/1_lait_de_rose.png',
+  96: '/illustrations/2_eclat_serum.png',
+  97: '/illustrations/3_creme_douce.png',
+  98: '/illustrations/4_lessentiel_cleanser.png',
+  99: '/illustrations/5_equilibre_serum.png',
+  100: '/illustrations/6_voile_moisturizer.png',
 };
 
 
