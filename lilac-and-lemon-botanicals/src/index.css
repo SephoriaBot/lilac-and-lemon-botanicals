@@ -201,7 +201,6 @@ section.products { padding: 96px 0; }
 .products-head h2 { font-size: 2rem; margin: 16px 0; }
 .products-head p { color: var(--plum-soft); }
 .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.product-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px 24px; position: relative; overflow: hidden; box-shadow: 0 8px 24px rgba(68, 59, 52, 0.05); }
 .ribbon {
   position: absolute; top: 16px; right: -32px;
   background: var(--lavender-deep); color: var(--cream);
@@ -209,8 +208,6 @@ section.products { padding: 96px 0; }
   padding: 4px 36px; transform: rotate(38deg);
 }
 .product-swatch { width: 40px; height: 40px; border-radius: 50%; margin-bottom: 16px; }
-.product-card h3 { font-style: italic; font-size: 1.25rem; margin-bottom: 8px; }
-.product-card .ingredient { font-family: 'Jost', sans-serif; font-size: 0.64rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--butter-deep); margin-bottom: 10px; display: block; }
 .product-card p { font-size: 0.86rem; color: var(--plum-soft); }
 .product-meta {
   display: flex;
@@ -218,17 +215,40 @@ section.products { padding: 96px 0; }
   align-items: center;
 }
 
+/* Softer product illustrations */
 .product-image {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: 170px;
+  height: 170px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F8F3EA;
+  box-shadow: 0 8px 24px rgba(92, 79, 66, 0.08);
 }
 
 .product-image img {
-  width: 100%;
-  height: 100%;
+  width: 78%;
+  height: 78%;
   object-fit: contain;
   display: block;
+}
+
+/* Make the product cards feel softer */
+.product-card {
+  text-align: center;
+  padding: 28px 22px 30px;
+}
+
+.product-card .ingredient {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.product-card h3 {
+  margin-top: 0;
 }
 
 /* ---------- follow ---------- */
@@ -267,4 +287,21 @@ footer { padding: 32px 0; text-align: center; font-family: 'Jost', sans-serif; f
   .follow-form { flex-direction: column; border-radius: 18px; }
   .nav-inner { flex-wrap: wrap; gap: 12px; }
   .nav-links { order: 3; width: 100%; gap: 18px; }
+}
+
+@media (max-width: 700px) {
+  .product-image {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 18px;
+  }
+
+  .product-image img {
+    width: 76%;
+    height: 76%;
+  }
+
+  .product-card {
+    padding: 22px 16px 26px;
+  }
 }
