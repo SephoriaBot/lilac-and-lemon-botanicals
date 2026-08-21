@@ -65,10 +65,10 @@ export default function ProductGrid() {
         <div className="product-grid">
           {products.map((p) => (
             <div className="product-card" key={p.id}>
+              {p.status === 'soon' && (
+                <span className="badge-soon">soon</span>
+              )}
               <div className="product-image">
-                {p.status === 'soon' && (
-                  <span className="badge-soon">soon</span>
-                )}
                 <img
                   src={productImages[p.id]}
                   alt={`${p.name} product illustration`}
