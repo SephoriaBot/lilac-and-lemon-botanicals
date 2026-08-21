@@ -14,6 +14,15 @@ type Product = {
 
 export default function ProductGrid() {
   const [products, setProducts] = useState<Product[]>([]);
+  const productImages: Record<string, string> = {
+  'Lait de Rose': '/illustrations/1_lait_de_rose.png',
+  'Éclat': '/illustrations/2_eclat_serum.png',
+  'Crème Douce': '/illustrations/3_creme_douce.png',
+  "L'Essentiel": '/illustrations/4_lessentiel_cleanser.png',
+  'Équilibre': '/illustrations/5_equilibre_serum.png',
+  'Voile': '/illustrations/6_voile_moisturizer.png',
+};
+
 
   useEffect(() => {
     fetch('/api/products')
@@ -39,7 +48,12 @@ export default function ProductGrid() {
           {products.map((p) => (
             <div className="product-card" key={p.id}>
               {p.status === 'soon' && <span className="ribbon">soon</span>}
-              <div className="product-swatch" style={{ background: p.swatch_color }} />
+              <div className="product-image">
+  <img
+    src={productImages[p.name]}
+    alt={`${p.name} product illustration`}
+  />
+</div>
               <span className="ingredient">{p.ingredient_label}</span>
              <h3>{p.name}</h3>
 <div className="product-meta">
