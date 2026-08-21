@@ -65,29 +65,31 @@ export default function ProductGrid() {
         <div className="product-grid">
           {products.map((p) => (
             <div className="product-card" key={p.id}>
-              {p.status === 'soon' && (
-                <span className="ribbon">soon</span>
-              )}
-
               <div className="product-image">
+                {p.status === 'soon' && (
+                  <span className="badge-soon">soon</span>
+                )}
                 <img
                   src={productImages[p.id]}
                   alt={`${p.name} product illustration`}
                 />
               </div>
 
-              <span className="ingredient">
-                {p.ingredient_label}
-              </span>
+              <span className="ingredient">{p.ingredient_label}</span>
+              <span
+                className="ingredient-stem"
+                style={{ background: p.swatch_color || 'var(--butter-deep)' }}
+              />
 
               <h3>{p.name}</h3>
 
+              <p>{p.description}</p>
+
               <div className="product-meta">
                 <span>{p.size_oz} oz</span>
-                <span>${p.price}</span>
+                <span className="dot" aria-hidden="true">·</span>
+                <span className="price">${p.price.toFixed(2)}</span>
               </div>
-
-              <p>{p.description}</p>
             </div>
           ))}
         </div>
