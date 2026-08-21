@@ -218,6 +218,19 @@ section.products { padding: 96px 0; }
   align-items: center;
 }
 
+.product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
 /* ---------- follow ---------- */
 section.follow { background: var(--lavender-deep); color: var(--cream); padding: 96px 0; text-align: center; }
 section.follow .label { color: var(--butter); }
