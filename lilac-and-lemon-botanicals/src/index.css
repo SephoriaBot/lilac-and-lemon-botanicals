@@ -200,23 +200,87 @@ section.products { padding: 96px 0; }
 .products-head { text-align: center; max-width: 540px; margin: 0 auto 48px; }
 .products-head h2 { font-size: 2rem; margin: 16px 0; }
 .products-head p { color: var(--plum-soft); }
-.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-.ribbon {
-  position: absolute; top: 16px; right: -32px;
-  background: var(--lavender-deep); color: var(--cream);
-  font-family: 'Jost', sans-serif; font-size: 0.58rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-  padding: 4px 36px; transform: rotate(38deg);
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: start;
 }
-.product-swatch { width: 40px; height: 40px; border-radius: 50%; margin-bottom: 16px; }
-.product-card p { font-size: 0.86rem; color: var(--plum-soft); }
+
+/* every other card sits a little lower, like specimens set out unevenly on a shelf */
+.product-grid .product-card:nth-child(2n) {
+  transform: translateY(22px);
+}
+
+.product-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  padding: 30px 24px 32px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 1px 2px rgba(92, 79, 66, 0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+.product-grid .product-card:nth-child(2n):hover {
+  transform: translateY(22px) translateY(-6px);
+}
+
+.product-card:hover {
+  border-color: var(--lavender-deep);
+  box-shadow: 0 20px 36px -18px rgba(68, 59, 52, 0.28);
+  transform: translateY(-6px);
+}
+
+.product-card p {
+  font-size: 0.86rem;
+  color: var(--plum-soft);
+  margin: 4px 0 20px;
+}
+
+.product-card .ingredient {
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.product-card h3 {
+  margin: 0 0 6px;
+}
+
+.ingredient-stem {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin: 0 auto 16px;
+  border-radius: 2px;
+  opacity: 0.85;
+}
+
 .product-meta {
   display: flex;
-  gap: 12px;
+  gap: 8px;
   align-items: center;
+  justify-content: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: var(--plum-soft);
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  margin-top: auto;
 }
+
+.product-meta .dot { color: var(--lavender); }
+.product-meta .price { color: var(--plum); font-weight: 700; }
 
 /* Softer product illustrations */
 .product-image {
+  position: relative;
   width: 170px;
   height: 170px;
   margin: 0 auto 22px;
@@ -229,26 +293,37 @@ section.products { padding: 96px 0; }
   box-shadow: 0 8px 24px rgba(92, 79, 66, 0.08);
 }
 
+.product-card:hover .product-image {
+  box-shadow: 0 12px 28px rgba(92, 79, 66, 0.14);
+}
+
 .product-image img {
   width: 78%;
   height: 78%;
   object-fit: contain;
   display: block;
+  transition: transform 0.5s ease;
 }
 
-/* Make the product cards feel softer */
-.product-card {
-  text-align: center;
-  padding: 28px 22px 30px;
+.product-card:hover .product-image img {
+  transform: rotate(3deg) scale(1.05);
 }
 
-.product-card .ingredient {
-  display: block;
-  margin-bottom: 8px;
-}
-
-.product-card h3 {
-  margin-top: 0;
+.badge-soon {
+  position: absolute;
+  top: 6px;
+  right: 2px;
+  background: var(--cream);
+  color: var(--butter-deep);
+  border: 1px solid var(--line);
+  font-family: 'Jost', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  z-index: 1;
 }
 
 /* ---------- follow ---------- */
@@ -279,6 +354,11 @@ footer { padding: 32px 0; text-align: center; font-family: 'Jost', sans-serif; f
   .story-art { max-width: 280px; margin: 0 auto; order: -1; }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .product-grid { grid-template-columns: 1fr; }
+  .product-grid .product-card:nth-child(2n),
+  .product-grid .product-card:nth-child(2n):hover {
+    transform: none;
+  }
+  .product-card:hover { transform: translateY(-4px); }
 }
 @media (max-width: 520px) {
   .steps { grid-template-columns: 1fr; }
